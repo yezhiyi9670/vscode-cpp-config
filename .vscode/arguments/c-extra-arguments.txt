@@ -1,0 +1,3 @@
+--static
+-Wall
+-std=c99

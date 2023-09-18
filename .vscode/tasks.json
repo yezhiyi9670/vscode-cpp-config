@@ -1,0 +1,93 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "cpp, temp",
+			"type": "process",
+			"command": "node",
+			"args": [
+				"${workspaceFolder}/.vscode/compiler-agent/cpp-compile.js",
+				"${file}",
+				"${workspaceFolder}/.vscode/debug-temp/a.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/.vscode/"
+			},
+			"group": {
+				"kind": "build"
+			},
+			"presentation": {
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+			},
+			"problemMatcher": "$gcc"
+		},
+		{
+			"label": "cpp, generate",
+			"type": "process",
+			"command": "node",
+			"args": [
+				"${workspaceFolder}/.vscode/compiler-agent/cpp-compile.js",
+				"${file}",
+				"${fileDirname}/${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/.vscode/"
+			},
+			"group": {
+				"kind": "build"
+			},
+			"presentation": {
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+			},
+			"problemMatcher": "$gcc"
+		},
+		{
+			"label": "c, temp",
+			"type": "process",
+			"command": "node",
+			"args": [
+				"${workspaceFolder}/.vscode/compiler-agent/c-compile.js",
+				"${file}",
+				"${workspaceFolder}/.vscode/debug-temp/a.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/.vscode/"
+			},
+			"group": {
+				"kind": "build"
+			},
+			"presentation": {
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+			},
+			"problemMatcher": "$gcc"
+		},
+		{
+			"label": "c, generate",
+			"type": "process",
+			"command": "node",
+			"args": [
+				"${workspaceFolder}/.vscode/compiler-agent/c-compile.js",
+				"${file}",
+				"${fileDirname}/${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/.vscode/"
+			},
+			"group": {
+				"kind": "build"
+			},
+			"presentation": {
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+			},
+			"problemMatcher": "$gcc"
+		}
+	]
+}
