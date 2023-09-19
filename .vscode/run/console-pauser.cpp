@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<time.h>
 #include<string>
+#include<conio.h>
 using namespace std;
 
 int main(int argc, char **argv) {
@@ -15,12 +16,20 @@ int main(int argc, char **argv) {
 	}
 
 	system("chcp 65001");
-	system("cls");
 
-	int startClock = clock();
-	int ch = system(cmd.c_str());
-	int endClock = clock();
+	while(true) {
+		system("cls");
+		int startClock = clock();
+		int ch = system(cmd.c_str());
+		int endClock = clock();
 
-	printf("\n----------------\n");
-	printf("Program finished in %.3lfs with exit code %u\n", double(endClock - startClock) / CLOCKS_PER_SEC, ch);
+		printf("\n----------------\n");
+		printf("Program finished in %.3lfs with exit code %u\n", double(endClock - startClock) / CLOCKS_PER_SEC, ch);
+		printf("Press R to run again, or any other key to close...");
+		
+		char inp = getch();
+		if(inp != 'R' && inp != 'r') {
+			break;
+		}
+	}
 }

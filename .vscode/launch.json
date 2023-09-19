@@ -41,7 +41,7 @@
 			"stopAtEntry": false,
 			"cwd": "${fileDirname}",
 			"environment": [],
-			"console": "externalTerminal",
+			"console": "newExternalWindow",
 			"preLaunchTask": "cpp, temp"
 		},
 		{
@@ -93,7 +93,7 @@
 			"stopAtEntry": false,
 			"cwd": "${fileDirname}",
 			"environment": [],
-			"console": "externalTerminal",
+			"console": "newExternalWindow",
 			"preLaunchTask": "c, temp"
 		},
 		{
