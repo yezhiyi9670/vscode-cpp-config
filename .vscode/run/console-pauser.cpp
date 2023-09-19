@@ -14,6 +14,9 @@ int main(int argc, char **argv) {
 		cmd += string(" ") + "\"" + argv[i] + "\"";
 	}
 
+	system("chcp 65001");
+	system("cls");
+
 	int startClock = clock();
 	int ch = system(cmd.c_str());
 	int endClock = clock();
