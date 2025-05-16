@@ -28,9 +28,9 @@ const extraArgs = fs.readFileSync('./arguments/' + argv[0] + '-extra-arguments.t
 	.filter(item => !!item)
 const compileCommand = { c: 'gcc.exe', cpp: 'g++.exe' }[argv[0]]
 const compileArgs = [
+	argv[1],
 	...extraArgs,
 	...projExtraArgs,
-	argv[1],
 	...extraIncludes,
 	'-o',
 	argv[2]
